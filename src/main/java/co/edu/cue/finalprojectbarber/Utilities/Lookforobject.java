@@ -1,9 +1,11 @@
 package co.edu.cue.finalprojectbarber.Utilities;
 
+import co.edu.cue.finalprojectbarber.DTOS.ClientQuoteDTO;
 import co.edu.cue.finalprojectbarber.model.CutService;
 import co.edu.cue.finalprojectbarber.model.Person;
 import co.edu.cue.finalprojectbarber.model.Client;
 import co.edu.cue.finalprojectbarber.model.Barberq;
+import javafx.collections.ObservableList;
 
 
 import java.util.HashSet;
@@ -38,4 +40,12 @@ public Barberq getBarber(String username,Double earning, HashSet<Barberq>listPeo
         }
 }return null;
 }
+    public ClientQuoteDTO getQuoteDTO(ObservableList<ClientQuoteDTO> quoteDTOS, String beginHour, String endHour, CutService cutService, Barberq barberq){
+        for (ClientQuoteDTO quoteDTO:quoteDTOS){
+            if (quoteDTO.getStartHour().equals(beginHour) && quoteDTO.getEndHour().equals(endHour) && quoteDTO.getNameCut().equals(cutService) && quoteDTO.getNameBarber().equals(barberq)){
+                return quoteDTO;
+            }
+        }
+        return null;
+    }
 }

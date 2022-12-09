@@ -6,6 +6,7 @@ import co.edu.cue.finalprojectbarber.Service.impl.Barbergod;
 import co.edu.cue.finalprojectbarber.controller.BarberMyQuotesController;
 import co.edu.cue.finalprojectbarber.model.Barberq;
 import co.edu.cue.finalprojectbarber.model.Client;
+import co.edu.cue.finalprojectbarber.model.CutService;
 import co.edu.cue.finalprojectbarber.model.Quote;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -55,6 +56,32 @@ public class TransObservList {
                 }
             }
         }return quoteDTOS;
+    }
+    public ObservableList<ClientQuoteDTO> QuoteDTOObservable(CutService cutservices, ObservableList<ClientQuoteDTO> ClientQuoteDTOS , LocalDate date){
+        ClientQuoteDTOS.clear();
+        for (int x=7;x<=20;x++){
+            if (Integer.parseInt(barbergod.getTimeConverter().localDateTimeToHour(LocalDateTime.now()).split(":")[0])>x && date.isEqual(LocalDate.now())){
+                continue;
+            }
+            if (x>9){
+                ClientQuoteDTOS.add(new ClientQuoteDTO(x+":00",(x+1)+":00",cutservices.getName(),cutservices.getCut().getName()));
+            }else if (x==9) {
+                ClientQuoteDTOS.add(new ClientQuoteDTO("0"+x+":00",(x+1)+":00",cutservices.getName(),cutservices.getCut().getName()));
+            }else {
+                ClientQuoteDTOS.add(new ClientQuoteDTO("0"+x+":00","0"+(x+1)+":00",cutservices.getName(),cutservices.getCut().getName()));
+            }
+
+        }
+        return ClientQuoteDTOS;
+    }
+    public ObservableList<ClientQuoteDTO> QuoteDTOLoanObservable(CutService cutservices, ObservableList<ClientQuoteDTO> quoteDTOS , LocalDate date,ArrayList<Quote> listQuote,Barberq barberq){
+        ArrayList<Quote> filterQuotes=barbergod.getLimitLister().limitAll(listQuote,cutservices,date.toString());
+        if (filterQuotes!=null){
+            for (Quote quote:filterQuotes){
+                quoteDTOS.remove(barbergod.getLookforobject().getQuoteDTO(quoteDTOS,barbergod.getTimeConverter().localDateTimeToHour(quote.getStartTime()),barbergod.getTimeConverter().localDateTimeToHour(quote.getEndTime()),cutservices,barberq));
+            }
+        }
+        return quoteDTOS;
     }
 
 

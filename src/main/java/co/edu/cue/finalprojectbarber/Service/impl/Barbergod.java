@@ -42,6 +42,7 @@ public class Barbergod {
     private final SelectValidator selectValidator;
     private final ClientQuoteController clientQuoteController;
     private final ClientQuoteModalController clientQuoteModalController;
+    private final LimitLister limitLister;
 
 
 public Barbergod() {
@@ -81,6 +82,7 @@ public Barbergod() {
     this.selectValidator=new SelectValidator(this);
     this.clientQuoteController=new ClientQuoteController();
     this.clientQuoteModalController=new ClientQuoteModalController();
+    this.limitLister=new LimitLister(this);
 
 
 }
@@ -150,6 +152,8 @@ public Barbergod() {
     public ClientQuoteController getClientQuoteController() {return clientQuoteController;}
 
     public ClientQuoteModalController getClientQuoteModalController() {return clientQuoteModalController;}
+
+    public LimitLister getLimitLister() {return limitLister;}
 }
 
 

@@ -4,6 +4,7 @@ import co.edu.cue.finalprojectbarber.DTOS.ClientQuoteDTO;
 import co.edu.cue.finalprojectbarber.model.Barberq;
 import co.edu.cue.finalprojectbarber.model.Client;
 import co.edu.cue.finalprojectbarber.model.CutService;
+import co.edu.cue.finalprojectbarber.model.Quote;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -26,7 +27,9 @@ public class ClientQuoteModalController implements Initializable {
     private CutService selectedCutservice;
     private LocalDate dateSelected;
     private Barberq barberqSelected;
+    private Quote quoteSelected;
     private ObservableList<Barberq> barberqObservableList= FXCollections.observableArrayList();
+    private ObservableList<ClientQuoteDTO> clientQuoteDTOObservableList=FXCollections.observableArrayList();
 
     public Barberq getBarberqSelected() {
         return barberqSelected;
@@ -68,6 +71,8 @@ public class ClientQuoteModalController implements Initializable {
         mfc.getBarbergod().getLoadDataFXML().loadata();
         selectedCutservice=mfc.getBarbergod().getClientQuoteModalController().getSelectedCutservice();
         dateSelected=mfc.getBarbergod().getClientQuoteModalController().getDateSelected();
+        mfc.getBarbergod().getTransObservList().QuoteDTOObservable(selectedCutservice,clientQuoteDTOObservableList,dateSelected);
+        mfc.getBarbergod().getTransObservList().QuoteDTOLoanObservable(selectedCutservice,clientQuoteDTOObservableList,dateSelected,mfc.getBarbergod().getQuoteServiceimpl().getQuotes(), barberqSelected);
         mfc.getBarbergod().getTransObservList().ClientQuoteDTOS(ObservableQuoteDTO,dateSelected,mfc.getBarbergod().getQuoteServiceimpl().getQuotes());
         mfc.getBarbergod().getPrepareColumn().prepareTableClientQouteDTO(StartColumn,EndColumn,ServiceColumn,BarberColumn);
         QuoteTable.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) ->{

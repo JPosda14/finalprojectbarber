@@ -28,7 +28,7 @@ public class LoginController implements Initializable {
                 case "client":
                     mfc.getBarbergod().getClientHomeController().setMyclient((Client) mfc.getBarbergod().getLookforobject().getPerson(Userfield.getText(),passwordfield.getText(),mfc.getBarbergod().getClientService().getListClients()));
                     mfc.getBarbergod().getClientMyQuotesController().setMeClient((Client) mfc.getBarbergod().getLookforobject().getPerson(Userfield.getText(),passwordfield.getText(),mfc.getBarbergod().getClientService().getListClients()));
-                    mfc.getBarbergod().getLoadScenes().changeScene(event,"FXML/BarbersHome.fxml");
+                    mfc.getBarbergod().getLoadScenes().changeScene(event,"FXML/ClientHome.fxml");
                     break;
                 case "barber":
                     mfc.getBarbergod().getBarberHomeController().setMybarber((Barberq)mfc.getBarbergod().getLookforobject().getPerson(Userfield.getText(),passwordfield.getText(),mfc.getBarbergod().getBarberpService().getListBarberq()));
