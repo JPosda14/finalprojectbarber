@@ -1,9 +1,9 @@
 package co.edu.cue.finalprojectbarber.model;
 
-public class barberp extends person {
+public class Barberq extends Person {
 
-    public barberp(String name) {
-        super(name);
+    public Barberq() {
+        super();
     }
     private double earning;
 
@@ -15,8 +15,8 @@ public class barberp extends person {
         this.earning = earning;
     }
 
-    public barberp(String name, double earning) {
-        super(name);
+    public Barberq(String name, String password,String email,double earning) {
+        super(name,password,email);
         this.earning = earning;
     }
 }

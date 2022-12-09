@@ -1,2 +1,6 @@
-package co.edu.cue.finalprojectbarber.model;public class admin {
-}
+package co.edu.cue.finalprojectbarber.model;
+
+public class Admin extends Person {
+
+    }
+

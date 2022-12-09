@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" style="-fx-background-color: #858D89;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.cue.finalprojectbarber.controller.ClientQuoteController">
+   <children>
+      <AnchorPane layoutX="-6.0" prefHeight="700.0" prefWidth="200.0" style="-fx-background-color: #21314a;">
+         <children>
+            <Button layoutX="6.0" layoutY="219.0" mnemonicParsing="false" onAction="#Myprofilebutton" prefHeight="89.0" prefWidth="206.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="122.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/myprofileb.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button layoutX="-23.0" layoutY="312.0" mnemonicParsing="false" onAction="#Quotebutton" prefHeight="96.0" prefWidth="221.0" style="-fx-background-color: transparent;">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="122.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/quote.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="6.0" layoutY="411.0" mnemonicParsing="false" onAction="#Myquotesbutton" prefHeight="90.0" prefWidth="206.0" style="-fx-background-color: transparent;">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="43.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/myquotes.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <ImageView fitHeight="58.0" fitWidth="191.0" layoutX="9.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Menu.jpeg" />
+               </image>
+            </ImageView>
+            <Separator layoutX="4.0" layoutY="309.0" prefWidth="205.0" />
+            <Separator layoutX="4.0" layoutY="411.0" prefWidth="205.0" />
+            <Separator layoutX="4.0" layoutY="216.0" prefWidth="205.0" />
+            <Separator layoutX="4.0" layoutY="511.0" prefWidth="205.0" />
+            <Button layoutX="6.0" layoutY="635.0" mnemonicParsing="false" onAction="#Backbutton" prefHeight="64.0" prefWidth="83.0" style="-fx-background-color: transparent;">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="56.0" fitWidth="102.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/back.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Text layoutX="387.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Services">
+         <font>
+            <Font name="Palatino Linotype" size="70.0" />
+         </font>
+      </Text>
+      <Text layoutX="237.0" layoutY="256.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Basic Hair Cut" wrappingWidth="94.40001220703124">
+         <font>
+            <Font name="Palatino Linotype" size="13.0" />
+         </font>
+      </Text>
+      <Text layoutX="598.0" layoutY="256.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Basic Barber Cut" wrappingWidth="109.60008544921874">
+         <font>
+            <Font name="Palatino Linotype" size="13.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="229.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/beard.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="592.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/haircut.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="237.0" layoutY="307.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/moustage.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="592.0" layoutY="307.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/beard.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="229.0" layoutY="488.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/haircut.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="592.0" layoutY="488.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/moustage.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="237.0" layoutY="475.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Change Hair Color" wrappingWidth="109.60008544921857">
+         <font>
+            <Font name="Palatino Linotype" size="13.0" />
+         </font>
+      </Text>
+      <Text layoutX="598.0" layoutY="475.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EyebrowCut" wrappingWidth="94.40001220703124">
+         <font>
+            <Font name="Palatino Linotype" size="13.0" />
+         </font>
+      </Text>
+      <Text layoutX="229.0" layoutY="659.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Full Clean" wrappingWidth="94.40001220703124">
+         <font>
+            <Font name="Palatino Linotype" size="13.0" />
+         </font>
+      </Text>
+      <Text layoutX="592.0" layoutY="659.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Beauty Care" wrappingWidth="94.40001220703124">
+         <font>
+            <Font name="Palatino Linotype" size="13.0" />
+         </font>
+      </Text>
+      <Text layoutX="340.0" layoutY="256.0" strokeType="OUTSIDE" strokeWidth="0.0" text="15.000$" wrappingWidth="94.40001220703124">
+         <font>
+            <Font name="Palatino Linotype" size="13.0" />
+         </font>
+      </Text>
+      <Text layoutX="719.0" layoutY="258.0" strokeType="OUTSIDE" strokeWidth="0.0" text="15.000$" wrappingWidth="94.40001220703124">
+         <font>
+            <Font name="Palatino Linotype" size="13.0" />
+         </font>
+      </Text>
+      <Text layoutX="364.0" layoutY="477.0" strokeType="OUTSIDE" strokeWidth="0.0" text="30.000$" wrappingWidth="94.40001220703124">
+         <font>
+            <Font name="Palatino Linotype" size="13.0" />
+         </font>
+      </Text>
+      <Text layoutX="701.0" layoutY="477.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10.000$" wrappingWidth="94.40001220703124">
+         <font>
+            <Font name="Palatino Linotype" size="13.0" />
+         </font>
+      </Text>
+      <Text layoutX="332.0" layoutY="659.0" strokeType="OUTSIDE" strokeWidth="0.0" text="30.000$" wrappingWidth="94.40001220703124">
+         <font>
+            <Font name="Palatino Linotype" size="13.0" />
+         </font>
+      </Text>
+      <Text layoutX="708.0" layoutY="659.0" strokeType="OUTSIDE" strokeWidth="0.0" text="20.000$" wrappingWidth="94.40001220703124">
+         <font>
+            <Font name="Palatino Linotype" size="13.0" />
+         </font>
+      </Text>
+      <Button layoutX="400.0" layoutY="240.0" mnemonicParsing="false" onAction="#HourHairCut" style="-fx-background-color: #21314a;" text="Hour" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <DatePicker fx:id="DateSelector" layoutX="707.0" layoutY="52.0" />
+      <Text layoutX="708.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date selector" wrappingWidth="94.40001220703124">
+         <font>
+            <Font name="Palatino Linotype" size="15.0" />
+         </font>
+      </Text>
+      <Button layoutX="428.0" layoutY="459.0" mnemonicParsing="false" onAction="#HourHairColor" style="-fx-background-color: #21314a;" text="Hour" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="406.0" layoutY="643.0" mnemonicParsing="false" onAction="#HourFullClean" style="-fx-background-color: #21314a;" text="Hour" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="791.0" layoutY="247.0" mnemonicParsing="false" onAction="#HourBarbercut" style="-fx-background-color: #21314a;" text="Hour" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="780.0" layoutY="461.0" mnemonicParsing="false" onAction="#HourEyebrowCut" style="-fx-background-color: #21314a;" text="Hour" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="780.0" layoutY="643.0" mnemonicParsing="false" onAction="#HourBeautyCare" style="-fx-background-color: #21314a;" text="Hour" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="ConfirmButton" layoutX="234.0" layoutY="20.0" mnemonicParsing="false" onAction="#ConfirmBtn" prefHeight="45.0" prefWidth="83.0" style="-fx-background-color: #21314a;" text="Confirm" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>

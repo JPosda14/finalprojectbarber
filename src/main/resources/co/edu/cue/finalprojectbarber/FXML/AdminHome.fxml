@@ -1,14 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="$CONTROLLER_NAME$"
-            prefHeight="400.0" prefWidth="600.0" >
-
-</AnchorPane>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" style="-fx-background-color: #10243d;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.cue.finalprojectbarber.controller.AdminHomeController">
+   <left>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #cf564e;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="74.0" fitWidth="185.0" layoutX="23.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/menuadmin.jpeg" />
+               </image>
+            </ImageView>
+            <Separator id="separator" layoutX="-1.0" layoutY="202.0" prefHeight="6.0" prefWidth="231.0" stylesheets="@../css/home.css" />
+            <Button layoutX="5.0" layoutY="205.0" mnemonicParsing="false" onAction="#BarbersviewButton" prefHeight="86.0" prefWidth="221.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fitHeight="93.0" fitWidth="133.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/barberword.jpeg" />
+                     </image></ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="1.0" layoutY="296.0" mnemonicParsing="false" onAction="#ClientsViewButton" prefHeight="82.0" prefWidth="227.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fitHeight="93.0" fitWidth="133.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/clientsword.jpeg" />
+                     </image></ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="5.0" layoutY="381.0" mnemonicParsing="false" prefHeight="118.0" prefWidth="201.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fitHeight="93.0" fitWidth="133.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Separator id="separator" layoutY="289.0" prefHeight="6.0" prefWidth="229.0" stylesheets="@../css/home.css" />
+            <Button layoutX="5.0" layoutY="618.0" mnemonicParsing="false" onAction="#BackButton" prefHeight="76.0" prefWidth="77.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fitHeight="57.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/back.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Separator id="separator" layoutX="1.0" layoutY="380.0" prefHeight="7.0" prefWidth="228.0" stylesheets="@../css/home.css" />
+         </children>
+         <cursor>
+            <Cursor fx:constant="SW_RESIZE" />
+         </cursor>
+      </AnchorPane>
+   </left>
+</BorderPane>

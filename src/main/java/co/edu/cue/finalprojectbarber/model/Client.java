@@ -1,21 +1,21 @@
-package model;
+package co.edu.cue.finalprojectbarber.model;
 
-public class client extends person {
-    public client(String name) {
-        super(name);
+public class Client extends Person {
+    public Client() {
+        super();
     }
-    private String Count;
+    private String number;
 
-    public String getCount() {
-        return Count;
-    }
-
-    public void setCount(String count) {
-        Count = count;
+    public Client(String name, String password, String email, String number) {
+        super(name, password, email);
+        this.number = number;
     }
 
-    public client(String name, String count) {
-        super(name);
-        Count = count;
+    public String getNumber() {
+        return number;
+    }
+
+    public void setNumber(String number) {
+        this.number = number;
     }
 }
